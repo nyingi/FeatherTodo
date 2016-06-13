@@ -63,5 +63,9 @@ namespace FeatherTodo.Views
 			ViewModel.Save();
 			Close();
 		}
+		void CmdCancelClick(object sender, EventArgs e)
+		{
+			Close();
+		}
 	}
 }

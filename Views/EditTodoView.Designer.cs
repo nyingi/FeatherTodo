@@ -94,6 +94,7 @@ namespace FeatherTodo.Views
 			this.cmdCancel.TabIndex = 4;
 			this.cmdCancel.Text = "Cancel";
 			this.cmdCancel.UseVisualStyleBackColor = true;
+			this.cmdCancel.Click += new System.EventHandler(this.CmdCancelClick);
 			// 
 			// cmdSave
 			// 

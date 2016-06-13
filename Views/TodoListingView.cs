@@ -62,6 +62,7 @@ namespace FeatherTodo
 				return;
 			}
 			ViewModel.Delete();
+			btnDelete.Enabled = false;
 		}
 	}
 }
