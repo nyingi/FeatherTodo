@@ -21,7 +21,7 @@ namespace FeatherTodo.Validation
 			{
 				return "A value must be provided for this field";
 			}
-			return "";
+			return string.Empty;
 		}
 	}
 }
