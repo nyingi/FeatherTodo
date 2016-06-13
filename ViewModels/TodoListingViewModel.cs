@@ -8,7 +8,7 @@
  */
 using System;
 using System.Collections.Generic;
-using FeatherMvvm;
+using DashMvvm;
 using FeatherTodo.Models;
 using FeatherTodo.Services;
 
@@ -17,7 +17,7 @@ namespace FeatherTodo.ViewModels
 	/// <summary>
 	/// Description of TodoListingViewModel.
 	/// </summary>
-	internal class TodoListingViewModel : FeatherViewModel
+	internal class TodoListingViewModel : DashViewModel
 	{
 		public TodoListingViewModel()
 		{

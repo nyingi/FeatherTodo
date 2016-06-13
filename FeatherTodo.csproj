@@ -32,8 +32,8 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FeatherMvvm">
-      <HintPath>packages\FeatherMvvm.0.0.1\lib\net452\FeatherMvvm.dll</HintPath>
+    <Reference Include="DashMvvm">
+      <HintPath>packages\DashMVVM.0.0.3\lib\net452\DashMvvm.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>

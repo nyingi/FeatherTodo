@@ -7,10 +7,8 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
-using FeatherMvvm;
+using DashMvvm;
 using FeatherTodo.Models;
 using FeatherTodo.ViewModels;
 using FeatherTodo.Views;
@@ -20,9 +18,9 @@ namespace FeatherTodo
 	/// <summary>
 	/// Description of MainForm.
 	/// </summary>
-	internal partial class TodoListingView : FeatherView<TodoListingViewModel>
+	internal partial class TodoListingView : DashView<TodoListingViewModel>
 	{
-		void MessageBus_MessagePassed(object sender, FeatherMvvm.Messaging.MessageEventArgs e)
+		void MessageBus_MessagePassed(object sender, DashMvvm.Messaging.MessageEventArgs e)
 		{
 			switch(e.MessageTag)
 			{

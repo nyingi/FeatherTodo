@@ -7,8 +7,7 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
-using FeatherMvvm;
-using FeatherMvvm.Messaging;
+using DashMvvm;
 using FeatherTodo.Models;
 using FeatherTodo.Services;
 
@@ -17,7 +16,7 @@ namespace FeatherTodo.ViewModels
 	/// <summary>
 	/// Description of EditTodoViewModel.
 	/// </summary>
-	public class EditTodoViewModel : FeatherViewModel
+	public class EditTodoViewModel : DashViewModel
 	{
 		public EditTodoViewModel()
 		{
