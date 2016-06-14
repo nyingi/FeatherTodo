@@ -47,12 +47,26 @@ namespace FeatherTodo.Views
 			Binder.Apply();
 		}
 
+		ErrorProvider _errorProvider;
+		private ErrorProvider ErrorProvider
+		{
+			get
+			{
+				if(_errorProvider == null)
+				{
+					_errorProvider = new ErrorProvider();
+					_errorProvider.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+				}
+				return _errorProvider;
+			}
+		}
+		
 		void SubscribeEvents()
 		{
 			ControlValidated += (sender,  e) => 
 			{
 				cmdSave.Enabled = false;
-				MessageBox.Show(e.Error);
+				ErrorProvider.SetError(e.ValidatableObject as Control, e.Error);
 			};
 			
 			ViewIsValid += (sender, e) => cmdSave.Enabled = true;

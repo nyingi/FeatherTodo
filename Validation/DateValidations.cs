@@ -23,7 +23,7 @@ namespace FeatherTodo.Validation
 				return "A value for date must be supplied";
 			}
 			
-			if(DateTime.Now > date)
+			if(DateTime.Now.Date > date.Date)
 			{
 				return "Date cannot be in the past";
 			}
