@@ -20,6 +20,8 @@ namespace FeatherTodo.Views
 		private System.Windows.Forms.DateTimePicker dtpDate;
 		private System.Windows.Forms.Button cmdCancel;
 		private System.Windows.Forms.Button cmdSave;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.ComboBox cboCategory;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -48,6 +50,8 @@ namespace FeatherTodo.Views
 			this.dtpDate = new System.Windows.Forms.DateTimePicker();
 			this.cmdCancel = new System.Windows.Forms.Button();
 			this.cmdSave = new System.Windows.Forms.Button();
+			this.label3 = new System.Windows.Forms.Label();
+			this.cboCategory = new System.Windows.Forms.ComboBox();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -65,7 +69,7 @@ namespace FeatherTodo.Views
 			| System.Windows.Forms.AnchorStyles.Right)));
 			this.txtDescription.Location = new System.Drawing.Point(5, 25);
 			this.txtDescription.Name = "txtDescription";
-			this.txtDescription.Size = new System.Drawing.Size(378, 20);
+			this.txtDescription.Size = new System.Drawing.Size(379, 20);
 			this.txtDescription.TabIndex = 1;
 			// 
 			// label2
@@ -83,12 +87,12 @@ namespace FeatherTodo.Views
 			| System.Windows.Forms.AnchorStyles.Right)));
 			this.dtpDate.Location = new System.Drawing.Point(5, 85);
 			this.dtpDate.Name = "dtpDate";
-			this.dtpDate.Size = new System.Drawing.Size(378, 20);
+			this.dtpDate.Size = new System.Drawing.Size(379, 20);
 			this.dtpDate.TabIndex = 3;
 			// 
 			// cmdCancel
 			// 
-			this.cmdCancel.Location = new System.Drawing.Point(260, 111);
+			this.cmdCancel.Location = new System.Drawing.Point(267, 199);
 			this.cmdCancel.Name = "cmdCancel";
 			this.cmdCancel.Size = new System.Drawing.Size(123, 39);
 			this.cmdCancel.TabIndex = 4;
@@ -98,7 +102,7 @@ namespace FeatherTodo.Views
 			// 
 			// cmdSave
 			// 
-			this.cmdSave.Location = new System.Drawing.Point(131, 111);
+			this.cmdSave.Location = new System.Drawing.Point(138, 199);
 			this.cmdSave.Name = "cmdSave";
 			this.cmdSave.Size = new System.Drawing.Size(123, 39);
 			this.cmdSave.TabIndex = 5;
@@ -106,11 +110,31 @@ namespace FeatherTodo.Views
 			this.cmdSave.UseVisualStyleBackColor = true;
 			this.cmdSave.Click += new System.EventHandler(this.CmdSaveClick);
 			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(5, 134);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(49, 13);
+			this.label3.TabIndex = 6;
+			this.label3.Text = "Category";
+			// 
+			// cboCategory
+			// 
+			this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cboCategory.FormattingEnabled = true;
+			this.cboCategory.Location = new System.Drawing.Point(10, 150);
+			this.cboCategory.Name = "cboCategory";
+			this.cboCategory.Size = new System.Drawing.Size(373, 21);
+			this.cboCategory.TabIndex = 7;
+			// 
 			// EditTodoView
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(402, 162);
+			this.ClientSize = new System.Drawing.Size(403, 249);
+			this.Controls.Add(this.cboCategory);
+			this.Controls.Add(this.label3);
 			this.Controls.Add(this.cmdSave);
 			this.Controls.Add(this.cmdCancel);
 			this.Controls.Add(this.dtpDate);

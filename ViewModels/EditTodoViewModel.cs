@@ -7,7 +7,9 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Collections.Generic;
 using DashMvvm;
+using FeatherMvvm.Attributes;
 using FeatherTodo.Models;
 using FeatherTodo.Services;
 
@@ -18,6 +20,10 @@ namespace FeatherTodo.ViewModels
 	/// </summary>
 	public class EditTodoViewModel : DashViewModel
 	{
+		private const String CategoryWork = "Work";
+		private const String CategoryPlay = "Play";
+		private const String CategoryOther = "Other";
+		
 		public EditTodoViewModel()
 		{
 			Date = DateTime.Now;
@@ -59,6 +65,31 @@ namespace FeatherTodo.ViewModels
 			};
 			new TodoService().Save(todo);
 			MessageBus.SendMessage(Messages.RefreshTodosList);
+		}
+		
+		[SelectedListItemPropertyName("SelectedCategory")]
+		public List<string> Categories
+		{
+			get
+			{
+				return new List<string>
+				{
+					CategoryOther, CategoryPlay, CategoryWork
+				};
+			}
+		}
+		
+		string _selectedCategory;
+		public string SelectedCategory
+		{
+			get
+			{
+				return _selectedCategory;
+			}
+			set
+			{
+				SetField(ref _selectedCategory,value);
+			}
 		}
 		
 		

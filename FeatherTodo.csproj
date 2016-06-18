@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DashMvvm">
-      <HintPath>packages\DashMVVM.0.0.3\lib\net452\DashMvvm.dll</HintPath>
+      <HintPath>packages\DashMVVM.0.0.4\lib\net452\DashMvvm.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>

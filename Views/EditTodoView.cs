@@ -42,6 +42,7 @@ namespace FeatherTodo.Views
 		{
 			Binder.Bind(txtDescription, txt => txt.Text, vm => vm.Description);
 			Binder.Bind(dtpDate, dtp => dtp.Value, vm => vm.Date);
+			Binder.Bind(cboCategory, cbo => cbo.Items, vm => vm.Categories);
 			
 			
 			Binder.Apply();
