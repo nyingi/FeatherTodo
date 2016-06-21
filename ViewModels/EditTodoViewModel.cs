@@ -27,6 +27,7 @@ namespace FeatherTodo.ViewModels
 		public EditTodoViewModel()
 		{
 			Date = DateTime.Now;
+			SelectedCategory = CategoryWork;
 		}
 		
 		string _description;
