@@ -7,6 +7,7 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using FeatherMvvm.Attributes;
 
 namespace FeatherTodo.Models
 {
@@ -19,7 +20,10 @@ namespace FeatherTodo.Models
 		{
 		}
 		
+		[ListViewColumnAttribute("Description",2)]
 		public string Description { get; set; }
+		
+		[ListViewColumn("Date",1)]
 		public DateTime Date { get; set; }
 		
 		public override string ToString()

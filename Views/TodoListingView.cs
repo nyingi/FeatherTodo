@@ -38,11 +38,14 @@ namespace FeatherTodo
 			InitializeComponent();
 			MessageBus.MessagePassed += MessageBus_MessagePassed;
 			DoBindings();
-			lvTodos.Columns[0].Width = lvTodos.Width;
+			lvTodos.GridLines = true;
+			lvTodos.FullRowSelect = true;
+			lvTodos.HideSelection = false;
 		}
 		
 		private void DoBindings()
 		{
+			Binder.Bind(lvTodos, obj => obj.Columns, vm => vm.ListOfTodos);
 			Binder.Bind(lvTodos, obj => obj.Items, vm => vm.ListOfTodos)
 				.ViewItem.ItemSelectionChanged += (sender, e) => 
 			{
